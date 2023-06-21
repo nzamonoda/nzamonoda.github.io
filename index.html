@@ -4,14 +4,20 @@
   <meta charset="UTF-8">
   <title>My Cool Website</title>
   <style>
-    body {
-      background-color: #222;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+    /* Reset default styles */
+    * {
+      box-sizing: border-box;
     }
 
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #222;
+      color: #fff;
+    }
+
+    /* Header */
     .header {
       text-align: center;
       padding: 50px;
@@ -23,16 +29,20 @@
       letter-spacing: 2px;
     }
 
+    /* Hero Section */
     .hero-image {
       background-image: url("bg-image.jpg");
       background-size: cover;
       background-position: center;
       height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .hero-text {
       text-align: center;
-      padding-top: 200px;
+      padding: 20px;
     }
 
     .hero-text h2 {
@@ -46,6 +56,7 @@
       margin-top: 20px;
     }
 
+    /* Content Section */
     .content {
       text-align: center;
       padding: 50px;
@@ -54,6 +65,7 @@
     .content h3 {
       font-size: 24px;
       margin-bottom: 20px;
+      color: #ff6f00;
     }
 
     .content p {
@@ -62,6 +74,7 @@
       margin-bottom: 20px;
     }
 
+    /* Footer */
     .footer {
       text-align: center;
       padding: 20px;
