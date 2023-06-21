@@ -1,58 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>迫力のある静的なウェブサイト</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
+  <title>迫力のある動的なウェブページ</title>
+  <style>
+    /* CSSスタイルの定義 */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    h1 {
+      color: #333;
+      font-size: 48px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      animation: pulsate 2s infinite;
+    }
+    @keyframes pulsate {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>迫力のあるウェブサイト</h1>
-    <nav>
-      <ul>
-        <li><a href="#">ホーム</a></li>
-        <li><a href="#">特徴</a></li>
-        <li><a href="#">サービス</a></li>
-        <li><a href="#">お問い合わせ</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
+    <h1>迫力のあるウェブページ</h1>
+  </div>
 
-  <section id="hero">
-    <div class="container">
-      <h2>魅力的なキャッチフレーズ</h2>
-      <p>説明的な文言や特徴の紹介</p>
-      <a href="#" class="btn">詳細を見る</a>
-    </div>
-  </section>
+  <script>
+    // JavaScriptコードの記述
+    window.addEventListener('DOMContentLoaded', (event) => {
+      animateText();
+    });
 
-  <section id="features">
-    <div class="container">
-      <h2>特徴的なセクション</h2>
-      <div class="feature">
-        <img src="feature1.jpg" alt="特徴的な画像">
-        <h3>特徴1</h3>
-        <p>特徴の説明や詳細情報</p>
-      </div>
-      <div class="feature">
-        <img src="feature2.jpg" alt="特徴的な画像">
-        <h3>特徴2</h3>
-        <p>特徴の説明や詳細情報</p>
-      </div>
-      <div class="feature">
-        <img src="feature3.jpg" alt="特徴的な画像">
-        <h3>特徴3</h3>
-        <p>特徴の説明や詳細情報</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 迫力のあるウェブサイト</p>
-    </div>
-  </footer>
+    function animateText() {
+      const heading = document.querySelector('h1');
+      setInterval(() => {
+        heading.classList.toggle('highlight');
+      }, 1000);
+    }
+  </script>
 </body>
 </html>
